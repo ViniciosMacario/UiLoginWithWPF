@@ -29,5 +29,17 @@ namespace UiLoginWithWPF.View
             if(e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
         }
+
+        //estamos minimizando a janela
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        // Estamos fechando a aplicação
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

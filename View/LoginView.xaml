@@ -19,8 +19,8 @@
             <ImageBrush ImageSource=""
         </Border.Background>-->
         <Border 
-            CornerRadius="50" 
-            BorderThickness="4.5">
+            CornerRadius="0" 
+            BorderThickness="4.5" >
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="DeepSkyBlue" Offset="0" />
@@ -30,11 +30,85 @@
             </Border.BorderBrush>
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
-                    <GradientStop Color="#060531"     Offset="0" />
+                    <GradientStop Color="#060531"     Offset="0"     />
                     <GradientStop Color="#1B1449"     Offset="0.65" />
-
                 </LinearGradientBrush>
             </Border.Background>
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="25"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="SignIn"
+                               Foreground="DarkGray"
+                               FontSize="16" 
+                               FontFamily="Montserrat"
+                               Grid.Column="0"
+                               VerticalAlignment="Center"
+                               Margin="50,0,0,0"
+                               />
+
+                    <Button x:Name="btnMinimize"
+                            BorderThickness="0"
+                            Content="-"
+                            Foreground="White"
+                            FontSize="10"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="2"
+                            Click="btnMinimize_Click"
+                            >
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#28AEED"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="Green"/>
+                                    </Trigger>
+                                </Style.Triggers>
+
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border 
+                                    Width="18" 
+                                    Height="18" 
+                                    CornerRadius="5" 
+                                    Background="{TemplateBinding Background}"
+                                    >
+                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Border>
+
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Button x:Name="btnExit"
+                            Background="red"
+                            BorderThickness="0"
+                            Content="X"
+                            Foreground="White"
+                            FontSize="16"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="3"
+                            Click="btnExit_Click"
+                            >
+                    </Button>
+                </Grid>
+            </Grid>
         </Border>
     </Border>
 </Window>
