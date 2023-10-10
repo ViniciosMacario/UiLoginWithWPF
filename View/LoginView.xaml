@@ -74,7 +74,7 @@
                                 <Setter Property="Background" Value="#28AEED"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Green"/>
+                                        <Setter Property="Background" Value="DarkBlue"/>
                                     </Trigger>
                                 </Style.Triggers>
 
@@ -84,9 +84,7 @@
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border 
-                                    Width="18" 
-                                    Height="18" 
-                                    CornerRadius="5" 
+                                    CornerRadius="9" 
                                     Background="{TemplateBinding Background}"
                                     >
                                     <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
@@ -96,7 +94,6 @@
                         </Button.Template>
                     </Button>
                     <Button x:Name="btnExit"
-                            Background="red"
                             BorderThickness="0"
                             Content="X"
                             Foreground="White"
@@ -106,6 +103,29 @@
                             Grid.Column="3"
                             Click="btnExit_Click"
                             >
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="Red"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="DarkRed"/>
+                                    </Trigger>
+                                </Style.Triggers>
+
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border 
+                                    CornerRadius="9" 
+                                    Background="{TemplateBinding Background}"
+                                    >
+                                    <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Border>
+
+                            </ControlTemplate>
+                        </Button.Template>
                     </Button>
                 </Grid>
             </Grid>
