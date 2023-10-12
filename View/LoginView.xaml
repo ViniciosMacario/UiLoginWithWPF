@@ -243,21 +243,24 @@
                         </Button.Template>
                     </Button>
 
-                    <TextBlock Text="Esqueceu sua Senha ?"
-                               Foreground="DarkGray"
-                               FontSize="12"
-                               FontWeight="Medium"
-                               FontFamily="Montserrat"
-                               TextAlignment="Center"
-                               Margin="0,15,0,0"/>
-                    <TextBlock Text="Resetar"
-                               Foreground="White"
-                               FontSize="12"
-                               FontWeight="Medium"
-                               FontFamily="Montserrat"
-                               TextAlignment="Center"
-                               Cursor="Hand"
-                               Margin="0,5,0,0"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,15,0,0">
+                        <TextBlock Text="Esqueceu sua Senha ?"
+                                   Foreground="DarkGray"
+                                   FontSize="12"
+                                   FontWeight="Medium"
+                                   FontFamily="Montserrat"
+                                   TextAlignment="Center"
+                                   />
+                        <TextBlock Text="Resetar"
+                                   Foreground="White"
+                                   FontSize="12"
+                                   FontWeight="Medium"
+                                   FontFamily="Montserrat"
+                                   TextAlignment="Center"
+                                   Cursor="Hand"
+                                   Margin="10,0,0,0"
+                                   />
+                    </StackPanel>
                 </StackPanel>
             </Grid>
         </Border>
